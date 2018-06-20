@@ -5,27 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>T & R</title>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $('#exampleModalCenter').modal('show')
+    });
+    </script>
 </head>
 <body>
-    
-</body>
-</html>
 
-<main class="container">
-    <h1>Registreren</h1>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Registreren</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+<main class="container">  
+  <div id="login_card" class="card text-center">
+    <div class="card-header">
+      <h4>Registreren</h4>
+    </div>
+    <class="card text-center">
+        <div class="card-content">
           </div>
           <form action="./register.php" method="post">
-            <div class="modal-body">
+            <div class="card-body">
               <div class="form-group">
                 <label for="exampleInputEmail1">E-mailadres</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Voer uw e-mailadres in" name="email">
@@ -36,8 +35,8 @@
                 <label class="form-check-label" for="exampleCheck1">U gaat akkoord met de algemene voorwaarden</label>
               </div>
             </div>
-            <div class="modal-footer">
-              <button type="submit" class="btn btn-primary">Verstuur</button>
+            <div class="card-footer"> 
+              <button type="submit" class="btn btn-default">Verstuur</button>
             </div>
           </form>
         </div>
@@ -45,3 +44,6 @@
     </div>
   </main>
   
+    
+</body>
+</html>

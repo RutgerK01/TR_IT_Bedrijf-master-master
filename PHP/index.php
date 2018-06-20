@@ -19,7 +19,13 @@
 </head>
 
 <body>
+
     <?php
+    if (isset($_GET["action"]) && $_GET['action'] == 'home') {
+        echo "<img src='../images/banner.png' id='banner' style='height: 300px; width: 100%; object-fit: cover;'>";       
+    } else if (!isset($_GET["action"])) {
+        echo "<img src='../images/banner.png' id='banner' style='height: 300px; width: 100%; object-fit: cover;'>";               
+    }
     
     include("./navigatie.php");
     

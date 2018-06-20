@@ -93,6 +93,9 @@
                   break;
                 }
                 echo '<li class="nav-item">
+                        <a class="nav-link" href="./index.php?action=games">Games</a>
+                      </li>';
+                echo '<li class="nav-item">
                         <a class="nav-link" href="./index.php?action=logout">Uitloggen</a>
                       </li>';
             } else {
@@ -103,7 +106,7 @@
                       <a class="nav-link" href="./index.php?action=registerform">Registreren</a>
                     </li>';
               echo '<li class="nav-item">
-                      <a class="nav-link" href="./index.php?action=loginform&amp;status=loginform">Inloggen</a>
+                      <a class="nav-link" href="./index.php?action=loginform">Inloggen</a>
                     </li>';
               echo '<li class="nav-item">
                       <a class="nav-link" href="./index.php?action=information">Informatie</a>
@@ -113,20 +116,7 @@
                     </li>';
             }
             ?>
-
-
 </ul>
 </div>
 </div>
 </nav>
-
-<!-- Header with Background Image -->
-<header class="business-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <h1 class="display-3 text-center text-dark mt-4"><b></b></h1>
-          </div>
-        </div>
-      </div>
-    </header>

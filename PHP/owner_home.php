@@ -1,5 +1,5 @@
 <?php
-  $userrole = array("eigenaar");
+  $userrole = array("owner");
   include("./security.php");
 ?>
 <main class="container">
