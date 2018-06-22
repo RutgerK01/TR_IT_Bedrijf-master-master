@@ -6,11 +6,20 @@
 
   if (isset($_POST["conditions"])) {
     echo "gechecked";
+    $naam = sanitize($_POST["naam"]);
+    $achernaam = sanitize($_POST["achternaam"]);
+    $bedrijfsnaam = sanitize($_POST["bedrijfsnaam"]);
     $email = sanitize($_POST["email"]);
     $conditions = sanitize($_POST["conditions"]);
 
     if (empty($_POST["email"])) {
       header("Location: ./index.php?action=registerform&status=empty_email");
+    } else if (empty($_POST["naam"])){ 
+      header("Location: ./index.php?action=registerform&status=empty_naam");
+    } else if (empty($_POST["achternaam"])){
+      header("Location: ./index.php?action=registerform&status=empty_achternaam");
+    } else if (empty($_POST["bedrijfsnaam"])){
+      header("Location: ./index.php?action=registerform&status=empty_bedrijfsnaam");
     } else {
       // Maak een selectie query om te kijken in de database of het emailadres al bestaat
       $sql = "SELECT * FROM `login` WHERE `email` = '{$email}'";
@@ -26,18 +35,24 @@
         // Echo dat het emailadres al bestaat anders...
         header("Location: ./index.php?action=registerform&status=emailexists");
       } else {
-        $sql = "INSERT INTO `login` (`id`,
-                                    `email`,
-                                    `conditions`,
-                                    `userrole`,
-                                    `password`,
-                                    `activated`) 
+        $sql = "INSERT INTO `login`    (`id`,
+                                        `naam`,
+                                        `achternaam`,
+                                        `bedrijfsnaam`,
+                                        `email`,
+                                        `conditions`,
+                                        `userrole`,
+                                        `password`,
+                                        `activated`) 
                                 VALUES (NULL,
-                                    '{$email}',
-                                    '{$conditions}',
-                                    'marketing',
-                                    '',
-                                    'no')";
+                                        '{$naam}',
+                                        '{$achternaam}',
+                                        '{$bedrijfsnaam}',
+                                        '{$email}',
+                                        '{$conditions}',
+                                        'bezoeker',
+                                        '',
+                                        'no')";
 
         // Vuur de query af op de database
         mysqli_query($conn, $sql);
