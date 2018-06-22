@@ -25,11 +25,29 @@
           </div>
           <form action="./register.php" method="post">
             <div class="card-body">
-              <div class="form-group">
-                <label for="exampleInputEmail1">E-mailadres</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Voer uw e-mailadres in" name="email">
-                <small id="emailHelp" class="form-text text-muted">Uw e-mailadres wordt niet verder gedeeld.</small>
+              <div class="row">
+              <div class="col">
+              <input type="text" class="form-control" placeholder="Voornaam">
               </div>
+              <div class="col">
+              <input type="text" class="form-control" placeholder="Achternaam">
+               </div>
+              </div>
+              &ensp;
+              <div class="form-group">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mailadres" name="email">
+              </div>
+
+              <div class="row">
+              <div class="col">
+              <input type="text" class="form-control" placeholder="Bedrijfsnaam ">
+              </div>
+              </div>
+
+              <div>
+              <small class="form-text text-muted">Uw gegevens worden niet verder gedeeld.</small>
+              </div>
+
               <div class="form-check" id="lbl_checkbox">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1" name="conditions">
                 <label class="form-check-label" for="exampleCheck1">U gaat akkoord met de algemene voorwaarden</label>
