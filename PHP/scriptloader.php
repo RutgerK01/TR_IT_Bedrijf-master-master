@@ -21,7 +21,7 @@
     foreach ($whitelist as $key => $value)  {
       // Kijk of $_GET["status"] in $whitelist bekend is.
       if (in_array($status, $value)) {
-        echo "<script src='./js/{$key}/{$status}.js'></script>";      
+        echo "<script src='../JS/{$key}/{$status}.js'></script>";      
       } 
     }   
   }
